@@ -23,8 +23,8 @@ public class CaballoAjedrez {
             }
         }while (!posicion);
 
-        ejex =ejex - 1;
-        ejey =ejey - 1;
+        ejex -= 1;
+        ejey -= 1;
 
         tablero[ejex][ejey]=2;
 
@@ -68,6 +68,40 @@ public class CaballoAjedrez {
                 tablero[ejex+2][ejey+1]=1;
                 tablero[ejex+2][ejey-1]=1;
                 tablero[ejex+1][ejey-2]=1;
+            }
+        }
+
+        if (ejey+2>7){
+            if(ejex+2>7){
+                tablero[ejex-1][ejey-2]=1;
+                tablero[ejex-2][ejey-1]=1;
+            }
+            else if(ejex-2<0){
+                tablero[ejex+2][ejey-1]=1;
+                tablero[ejex+1][ejey-2]=1;
+
+            }
+            else {
+                tablero[ejex+2][ejey-1]=1;
+                tablero[ejex+1][ejey-2]=1;
+                tablero[ejex-1][ejey-2]=1;
+                tablero[ejex-2][ejey-1]=1;
+            }
+        }
+        else if (ejey-2<0){
+            if (ejex+2>7){
+                tablero[ejex-2][ejey+1]=1;
+                tablero[ejex-1][ejey+2]=1;
+            }
+            else if (ejex-2<0){
+                tablero[ejex+1][ejey+2]=1;
+                tablero[ejex+2][ejey+1]=1;
+            }
+            else {
+                tablero[ejex+1][ejey+2]=1;
+                tablero[ejex+2][ejey+1]=1;
+                tablero[ejex-2][ejey+1]=1;
+                tablero[ejex-1][ejey+2]=1;
             }
         }
 
