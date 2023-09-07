@@ -9,7 +9,7 @@ public class AdivinoNum {
         int NumAleatorio = random.nextInt(100) + 1, contador = 0, intento = 0;
         LinkedList<Integer> Intentos = new LinkedList<>();
 
-        System.out.println("El programa pensó un número. Intente adivinarlo en el menor número de intentos posibles");
+        System.out.println("El programa pensó un número del 1 al 100. Intente adivinarlo en la menor cantidad de intentos posibles");
 
         while (intento != NumAleatorio){
 
